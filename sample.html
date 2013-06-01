@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Make sure your file includes this line or table will never scale-->
+      <link href="css/styles.css" media="screen" rel="stylesheet" />
+      <script type="text/javascript" language="javascript" src="js/jquery.js"></script><!-- came as a part of datatables package -->
+      <script type="text/javascript" language="javascript" src="js/dataTable_mobify.js"></script><!--for datatables obviously-->      
+      <title>jQuery DataTable Mobile Function</title>
+      <!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+      <!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+      <!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+      <!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]--> 
+  </head>
+  <body>
+  <div id="container"> 
+    <div id="content">
+    <h2>Rendering <a href="http://www.datatables.net/" target="_blank">jquery DataTables</a> for mobile with jQuery plugin</h2>
+    
+    <h2>The year in Heavy Metal - 1986:</h2>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="" id="example">
+                      <thead>
+                        <tr>
+                          <th><input type="checkbox" /></th>                        
+                          <th>Band Name</th>
+                          <th>Album Title</th>
+                          <th>Release Date</th>
+                          <th>Notable Tracks</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Metallica</a></td>
+                          <td><a href="#">Master of Puppets</a></td>
+                          <td>02/21/1986</td>
+                          <td>Master of Puppets, Orion, Welcome Home Sanitarium, Battery</td>
+                        </tr>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Megadeth</a></td>
+                          <td><a href="#">Peace Sells...but Who's Buying</a></td>
+                          <td>07/20/1986</a></td>
+                          <td>Peace Sells, Good Mourning/Black Friday</a></td>
+                        </tr>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Slayer</a></td>
+                          <td><a href="#">Reign in Blood</a></td>
+                          <td>10/07/1986</td>
+                          <td>Raining Blood, Jesus Saves, Angel of Death</td>
+                        </tr>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">AC/DC</a></td>
+                          <td><a href="#">Who Made Who</a></td>
+                          <td>05/24/1986</td>
+                          <td>Who Made Who, Hells Bells, You Shook Me All Night Long</td>
+                        </tr>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Judas Priest</a></td>
+                          <td><a href="#">Turbo</a></td>
+                          <td>04/14/1986</td>
+                          <td>Turbo Lover, Hot for Love</a></td>
+                        </tr> 
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Iron Maiden</a></td>
+                          <td><a href="#">Somewhere in Time</a></td>
+                          <td>09/29/1986</td>
+                          <td>Wasted Years, Caught Somewhere In Time</td>
+                        </tr>
+                        </tr> 
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Metal Church</a></td>
+                          <td><a href="#">The Dark</a></td>
+                          <td>08/06/1986</td>
+                          <td>Start the Fire, The Dark, Line of Death</td>
+                        </tr>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Van Halen</a></td>
+                          <td><a href="#">5150</a></td>
+                          <td>03/25/1986</td>
+                          <td>Why Can't This Be Love?, Summer Nights, Love Walks In</td>
+                        </tr>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Beastie Boys</a></td>
+                          <td><a href="#">Licensed to Ill</a></td>
+                          <td>11/15/1986</td>
+                          <td>She's Crafty, No Sleep Till Brooklyn, Brass Monkey</td>
+                        </tr>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">King Diamond</a></td>
+                          <td><a href="#">Fatal Portrait</a></td>
+                          <td>02/17/1986</td>
+                          <td>The Jonah, Haunted, Halloween</td>
+                        </tr>
+                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Queensryche</a></td>
+                          <td><a href="#">Rage For Order</a></td>
+                          <td>07/14/1986</td>
+                          <td>Walk in the Shadows, Gonna Get Close to You</td>
+                        </tr>                        <tr>
+                          <td class="check"><input type="checkbox" /></td>
+                          <td><a href="#">Ozzy Osbourne</a></td>
+                          <td><a href="#">The Ultimate Sin</a></td>
+                          <td>02/22/1986</td>
+                          <td>The Ultimate Sin, Shot in the Dark, Lightning Strikes</td>
+                        </tr>                                                                                                                                
+                      </tbody>
+                    </table>  
+           <!-- Code to render data table from jquery.dataTables.js -->         
+          <script type="text/javascript" charset="utf-8">         
+            $(document).ready(function () {
+              $('#example').dataTable({
+                      "bPaginate": true,
+                      "bFilter": true,
+                      "bScrollCollapse": true,
+                      "iDisplayLength": 20,
+                      "bLengthChange": true,
+                      "sPaginationType": "full_numbers",
+                      "sDom": 'ft<"bottom"rlp<"clear">',				
+                      "oLanguage": {
+                      "sSearch": "<strong>Search:</strong>",	
+                      "sLengthMenu": 'Display <select>' +
+                          '<option value="10">10</option>' +
+                          '<option value="20">20</option>' +
+                          '<option value="30">30</option>' +
+                          '<option value="40">40</option>' +
+                          '<option value="50">50</option>' +
+                          '<option value="-1">All</option>' +
+                          '</select> records'
+                          }
+                      });
+                       
+					  $('#example_wrapper').css({'border':'1px solid #cccccc','background-color':'#e6e6e0'}); 
+                      //Make odd and even rows alternate color for IE8 &amp; 7
+                      $('#example tr:odd').css({'background-color':'#f7f7f7'});
+                      $('#example tr:even').css({'background-color':'#f0f0f0'});
+					  $('#example a').prop('href', 'http://en.wikipedia.org/wiki/1986_in_heavy_metal_music').attr('target','blank');
+              });
+              	  // This function will initiate the table with the below id to render for mobile
+                  mobifyDataTable('example');		  		  
+            	
+				 // This code is simply to show how the mobifyDataTable function works when redragging on a desktop borwser only 	
+			     var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/); 
+				  if($(!isMobile)) {					  
+					  function resizeRefresh() {
+						// stopped resizing in 100ms!
+						location.reload();  
+					  }					  
+					  var execute;
+					  $(window).resize(function() {
+						clearTimeout(execute);
+						execute = setTimeout(resizeRefresh, 50);								  
+					  });
+				  }
+            </script>
+         </div>      
+     </div>  
+     
+     <!--DataTables-->
+      <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>                            
+  </body>
+</html>
