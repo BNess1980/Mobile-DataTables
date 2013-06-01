@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* DataTable Mobile CSS Document */
+
+body{font-family:georgia, arial, sans-serif;margin:0 auto;width:100%;font-size:14px;}
+a{color:#990000;text-decoration:none;}
+a:hover{text-decoration:underline;}
+#container{width:1024px;margin:0 auto;}
+/********Must render this value 100% for table to center in browser widths lower than 800px; if left to a pixel value; if will add scrollbars********/
+@media
+only screen and (min-device-width: 320px) and (max-device-width: 800px),
+(min-width: 320px) and (max-width: 800px){
+	#container{width:100%;}
+}
+/*******/
+#content{padding:15px;}
+table#example th{background-color:#e8e8e8;border-bottom:1px solid #ccc;border-top:1px solid #ccc;}
+table#example td, table#example th {border-bottom:1px solid #ccc;border-collapse:collapse;padding:15px;}
+table#example tr:hover{background-color:#e6e6e0!important;cursor:pointer;}
+<!--DataTable-->
+#example_filter{min-height:55px;border-bottom:1px solid #cccccc;}
+#example_filter label{padding:10px 12px 9px 10px;display:block;}
+#example_filter input{
+	height:30px;
+	width:200px;
+	border-radius:4px;	
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	-ms-border-radius:2px;
+	-o-border-radius:2px;
+	box-shadow:0 0 5px #c1c1c1 inset;
+	-webkit-box-shadow:0 0 5px #c1c1c1 inset;
+	-moz-box-shadow:0 0 5px #c1c1c1 inset;
+	border:1px solid #ccc;
+	padding:0 10px;
+	overflow:hidden;
+	margin-left:5px;
+	}
+.bottom{background-color:#e8e8e8;padding:10px;font-weight:bold;}
+.bottom div{margin-bottom:5px}
+#example_paginate a{margin-right:10px;text-decoration:underline;}	
+	
+html.ie7 #example_filter strong{position:relative;top:-7px;left:0px;}
+html.ie8 #example_filter input{padding:7px 7px;height:15px;}
