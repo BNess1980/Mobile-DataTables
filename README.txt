@@ -15,5 +15,3 @@ are difficult to modify with jQuery.
 
 *The functions on line 36 in /js/dataTable.mobify.js applies only to dataTables checkbox items. This would've
 come up blank if not specified since n o text value exists in the corresponding th.
-
-Testing terminal 3.3.12
