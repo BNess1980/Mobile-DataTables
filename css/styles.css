@@ -5,18 +5,48 @@ body{font-family:georgia, arial, sans-serif;margin:0 auto;width:100%;font-size:1
 a{color:#990000;text-decoration:none;}
 a:hover{text-decoration:underline;}
 #container{width:1024px;margin:0 auto;}
-/********Must render this value 100% for table to center in browser widths lower than 800px; if left to a pixel value; if will add scrollbars********/
-@media
-only screen and (min-device-width: 320px) and (max-device-width: 800px),
-(min-width: 320px) and (max-width: 800px){
+#content{padding:15px;}
+
+/* Media Queries - Must render this value 100% for table to center in browser widths lower than 800px; 
+if left to a pixel value; if will add scrollbars*/
+
+/*For desktop*/
+@media (min-width: 320px) and (max-width: 800px){
 	#container{width:100%;}
 }
-/*******/
-#content{padding:15px;}
+
+/*For mobile*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
+	#container{width:100%;}
+}
+/* End Media Queries*/
+
+/*Basic Table Classes*/
 table#example th{background-color:#e8e8e8;border-bottom:1px solid #ccc;border-top:1px solid #ccc;}
 table#example td, table#example th {border-bottom:1px solid #ccc;border-collapse:collapse;padding:15px;}
 table#example tr:hover{background-color:#e6e6e0!important;cursor:pointer;}
-<!--DataTable-->
+
+/*Mobify Classes*/
+.mobifyDisplay{
+	display:block;
+	overflow:hidden;
+}
+
+.mobifyPosition {
+	position:absolute;
+	top:-9999px;
+	left:-9999px;
+}
+
+.mobifyHdr{
+	position:absolute;
+	top:15px;left:6px;
+	width:45%;
+	padding-right:10px;
+	white-space:nowrap;
+}
+
+/* DataTable Specific Classes */
 #example_filter{min-height:55px;border-bottom:1px solid #cccccc;}
 #example_filter label{padding:10px 12px 9px 10px;display:block;}
 #example_filter input{

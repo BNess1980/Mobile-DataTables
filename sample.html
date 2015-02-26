@@ -5,12 +5,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Make sure your file includes this line or table will never scale-->
       <link href="css/styles.css" media="screen" rel="stylesheet" />
       <script type="text/javascript" language="javascript" src="js/jquery.js"></script><!-- came as a part of datatables package -->
-      <script type="text/javascript" language="javascript" src="js/dataTable_mobify.js"></script><!--for datatables obviously-->      
+      <script type="text/javascript" language="javascript" src="js/dataTable_mobify.min.js"></script><!--for datatables obviously-->      
       <title>jQuery DataTable Mobile Function</title>
       <!--[if IE 7 ]> <html class="ie7"> <![endif]-->
       <!--[if IE 8 ]> <html class="ie8"> <![endif]-->
       <!--[if IE 9 ]> <html class="ie9"> <![endif]-->
-      <!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]--> 
+      <!--[if (gt IE 9)|!(IE)]> < ie9 <![endif]--> 
   </head>
   <body>
   <div id="container"> 
@@ -148,9 +148,9 @@
 					  $('#example a').prop('href', 'http://en.wikipedia.org/wiki/1986_in_heavy_metal_music').attr('target','blank');
               });
               	  // This function will initiate the table with the below id to render for mobile
-                  mobifyDataTable('example');		  		  
+                  $.fn.mobifyDataTable('example');		  		  
             	
-				 // This code is simply to show how the mobifyDataTable function works when redragging on a desktop borwser only 	
+				 // This code is simply to show how the mobifyDataTable function works when redragging on a desktop browser only 	
 			     var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/); 
 				  if($(!isMobile)) {					  
 					  function resizeRefresh() {
